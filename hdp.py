@@ -8,7 +8,7 @@ from streamlit_option_menu import option_menu
 
 # loading the saved model
 
-heart_disease_model = pickle.load(open('trained_model.sav', 'rb'))
+loaded_model = pickle.load(open('trained_model.sav', 'rb'))
 
 
 # sidebar for navigation
@@ -21,6 +21,28 @@ with st.sidebar:
                           default_index=0)
 
 
+# creating a function for prediction
+def wine_quality_prediction(input_data):
+
+    input_data = (40,1,2,140,289,0,0,172,0,0,1)
+
+    # change the input data to a numpy array
+    input_data_as_numpy_array= np.asarray(input_data)
+
+    # reshape the numpy array as we are predicting for only on instance
+    input_data_reshaped = input_data_as_numpy_array.reshape(1,-1)
+
+    prediction = loaded_model.predict(input_data_reshaped)
+    print(prediction)
+
+    if (prediction[0]== 0):
+      return 'This patient does not have any heart disease'
+    else:
+      return 'This patient has heart disease'
+  
+
+def main():
+    
 # Heart Disease Prediction Page
 if (selected == 'Know your heart health'):
     
@@ -77,7 +99,7 @@ if (selected == 'Know your heart health'):
     # creating a button for Prediction
     
     if st.button('Heart Disease Test Result'):
-        heart_prediction = heart_disease_model.predict([[age,sex,chest_pain_type,resting_blood_pressure,cholesterol,fasting_blood_sugar,rest_ecg,max_heart_rate_achieved,exercise_induced_angina,st_depression,st_slope]])                          
+        heart_prediction = heart_disease_model.predict([age,sex,chest_pain_type,resting_blood_pressure,cholesterol,fasting_blood_sugar,rest_ecg,max_heart_rate_achieved,exercise_induced_angina,st_depression,st_slope])                          
         
         if (heart_prediction[0] == 0):
           heart_diagnosis = 'This patient does not have any heart disease'
@@ -86,4 +108,6 @@ if (selected == 'Know your heart health'):
         
     st.success(heart_diagnosis)
         
- 
+if __name__ == '__main__':
+    main()
+    
