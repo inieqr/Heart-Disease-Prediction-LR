@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-
+import numpy as np
 import pickle
 import streamlit as st
 from streamlit_option_menu import option_menu
