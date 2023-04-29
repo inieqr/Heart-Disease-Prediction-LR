@@ -68,10 +68,10 @@ if (selected == 'Know your heart health'):
         oldpeak = st.text_input("ST depression induced by exercise relative to rest")
         
     with col3:
-        slope = st.text_input("Slope of the peak exercise ST segment (1: upsloping, 2: flat, 3: downsloping)")
+        slope = st.text_input("Slope of the peak exercise ST segment (0: upsloping, 1: flat, 2: downsloping)")
         
     with col4:
-        ca = st.text_input("Major vessels colored by flourosopy (0-3)")
+        ca = st.text_input("Major vessels colored by flourosopy (Between 0-3)")
         
     with col1:
         thal = st.text_input("Thalassemia (0: normal, 1: fixed defect, 2: reversable defect)")
