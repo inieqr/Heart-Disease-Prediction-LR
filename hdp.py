@@ -65,10 +65,10 @@ if (selected == 'Know your heart health'):
         exang = st.text_input("Angina induced by exercise (1: Yes, 0: No)")
         
     with col1:
-        oldpeak = st.text_input('ST depression induced by exercise relative to rest')
+        oldpeak = st.text_input("ST depression induced by exercise relative to rest")
         
     with col2:
-        slope = st.text_input('Slope of the peak exercise ST segment')
+        slope = st.text_input("Slope of the peak exercise ST segment (1: upsloping 2: flat 3: downsloping)")
         
     with col3:
         ca = st.text_input('Major vessels colored by flourosopy')
