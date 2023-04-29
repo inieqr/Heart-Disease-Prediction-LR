@@ -38,10 +38,10 @@ if (selected == 'Know your heart health'):
     col1, col2, col3 = st.columns(3)
     
     with col1:
-        age = st.text_input("Patient's Age in years")
+        age = st.text_input("Age (in years)")
         
     with col2:
-        sex = st.text_input("Patient's Gender (1: Male, 0: Female)")
+        sex = st.text_input("Sex (1: Male, 0: Female)")
         
     with col3:
         cp = st.text_input("Chest Pain Type (1: Typical Angina, 2: Atypical Angina, 3: Non-Anginal Pain, 4: Asymptomatic)")
