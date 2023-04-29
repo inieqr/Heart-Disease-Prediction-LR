@@ -33,19 +33,19 @@ if (selected == 'Know your heart health'):
         age = st.text_input("Patient's Age in years")
         
     with col2:
-        sex = st.text_input("Patient's Gender (Male = 1 Female = 0)")
+        sex = st.text_input("Patient's Gender (1: Male, 0: Female)")
         
     with col3:
-        cp = st.text_input("Chest Pain Type (Typical Angina = 1, Atypical Angina = 2, Non-Anginal Pain = 3, Asymptomatic = 4)")
+        cp = st.text_input("Chest Pain Type (1: Typical Angina, 2: Atypical Angina, 3: Non-Anginal Pain, 4: Asymptomatic)")
         
     with col1:
-        trestbps = st.text_input('Resting Blood Pressure')
+        trestbps = st.text_input("Level of blood pressure at resting mode in mm/HG")
         
     with col2:
-        chol = st.text_input('Serum Cholestoral in mg/dl')
+        chol = st.text_input("Serum Cholestoral in mg/dl")
         
     with col3:
-        fbs = st.text_input('Fasting Blood Sugar > 120 mg/dl')
+        fbs = st.text_input("Blood sugar levels on fasting (1: if FastingBS > 120 mg/dl, 0: otherwise)")
         
     with col1:
         restecg = st.text_input('Resting Electrocardiographic results')
