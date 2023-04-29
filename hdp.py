@@ -36,7 +36,7 @@ if (selected == 'Know your heart health'):
         sex = st.text_input("Patient's Gender (Male = 1 Female = 0)")
         
     with col3:
-        cp = st.text_input('Chest Pain types')
+        cp = st.text_input("Chest Pain Type (Typical Angina = 1, Atypical Angina = 2, Non-Anginal Pain = 3, Asymptomatic = 4)")
         
     with col1:
         trestbps = st.text_input('Resting Blood Pressure')
