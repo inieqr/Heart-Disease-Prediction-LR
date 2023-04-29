@@ -22,7 +22,7 @@ with st.sidebar:
 
 
 # creating a function for prediction
-def wine_quality_prediction(input_data):
+def heart_disease_prediction(input_data):
 
     input_data = (40,1,2,140,289,0,0,172,0,0,1)
 
@@ -41,10 +41,12 @@ def wine_quality_prediction(input_data):
       return 'This patient has heart disease'
   
 
-def main():
+
     
 # Heart Disease Prediction Page
 if (selected == 'Know your heart health'):
+    
+def main():
     
     # page title
     st.title('Heart Disease Prediction Web App')
@@ -99,7 +101,7 @@ if (selected == 'Know your heart health'):
     # creating a button for Prediction
     
     if st.button('Heart Disease Test Result'):
-        heart_prediction = heart_disease_model.predict([age,sex,chest_pain_type,resting_blood_pressure,cholesterol,fasting_blood_sugar,rest_ecg,max_heart_rate_achieved,exercise_induced_angina,st_depression,st_slope])                          
+        heart_prediction = heart_disease_prediction([age,sex,chest_pain_type,resting_blood_pressure,cholesterol,fasting_blood_sugar,rest_ecg,max_heart_rate_achieved,exercise_induced_angina,st_depression,st_slope])                          
         
         if (heart_prediction[0] == 0):
           heart_diagnosis = 'This patient does not have any heart disease'
