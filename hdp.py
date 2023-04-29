@@ -35,10 +35,10 @@ def heart_disease_prediction(input_data):
     prediction = loaded_model.predict(input_data_reshaped)
     print(prediction)
 
-    if (prediction[0]== 0):
-      return 'This patient does not have any heart disease'
-    else:
+    if (prediction[0]==1):
       return 'This patient has heart disease'
+    else:
+      return 'This patient does not have any heart disease' 
   
 
 
