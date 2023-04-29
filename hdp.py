@@ -16,13 +16,13 @@ with st.sidebar:
     
     selected = option_menu('Design and Implementation of an Expert System to Predict Heart Disease Using Logistic Regression',
                           
-                          ['Heart Disease Prediction'],
+                          ['Know your heart health'],
                           icons=['heart'],
                           default_index=0)
 
 
 # Heart Disease Prediction Page
-if (selected == 'Heart Disease Prediction'):
+if (selected == 'Know your heart health'):
     
     # page title
     st.title('Heart Disease Prediction Web App')
