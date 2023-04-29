@@ -40,37 +40,37 @@ if (selected == 'Know your heart health'):
     with col1:
         age = st.text_input("Age (in years)")
         
-    with col2:
+    with col1:
         sex = st.text_input("Sex (1: Male, 0: Female)")
         
-    with col3:
+    with col1:
         cp = st.text_input("Chest Pain Type (0: Typical Angina, 1: Atypical Angina, 2: Non-Anginal Pain, 3: Asymptomatic)")
         
     with col1:
         trestbps = st.text_input("Level of blood pressure at resting mode in mm/HG")
         
-    with col2:
+    with col1:
         chol = st.text_input("Serum Cholestoral in mg/dl")
         
-    with col3:
+    with col1:
         fbs = st.text_input("Blood sugar levels on fasting > 120 mg/dl (1: True, 0: False)")
         
     with col1:
         restecg = st.text_input("Resting electrocardiographic results (0 : Normal, 1: Abnormality in ST-T wave, 2: Left ventricular hypertrophy)")
         
-    with col2:
+    with col1:
         thalach = st.text_input('Maximum Heart Rate achieved')
         
-    with col3:
+    with col1:
         exang = st.text_input("Angina induced by exercise (1: Yes, 0: No)")
         
     with col1:
         oldpeak = st.text_input("ST depression induced by exercise relative to rest")
         
-    with col2:
+    with col1:
         slope = st.text_input("Slope of the peak exercise ST segment (1: upsloping, 2: flat, 3: downsloping)")
         
-    with col3:
+    with col1:
         ca = st.text_input("Major vessels colored by flourosopy (0-3)")
         
     with col1:
