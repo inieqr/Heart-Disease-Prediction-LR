@@ -74,7 +74,7 @@ if (selected == 'Know your heart health'):
         ca = st.text_input("Major vessels colored by flourosopy (0-3)")
         
     with col1:
-        thal = st.text_input('thal: 0 = normal; 1 = fixed defect; 2 = reversable defect')
+        thal = st.text_input("Thalassemia (0: normal, 1: fixed defect, 2: reversable defect')
         
      
     # code for Prediction
