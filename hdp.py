@@ -53,19 +53,19 @@ if (selected == 'Know your heart health'):
         chol = st.text_input("Serum Cholestoral in mg/dl")
         
     with col3:
-        fbs = st.text_input("Blood sugar levels on fasting (1: if FastingBS > 120 mg/dl, 0: otherwise)")
+        fbs = st.text_input("Blood sugar levels on fasting > 120 mg/dl (1: True, 0: False)")
         
     with col1:
-        restecg = st.text_input('Resting Electrocardiographic results')
+        restecg = st.text_input("Resting electrocardiographic results (0 : Normal, 1: Abnormality in ST-T wave, 2: Left ventricular hypertrophy)")
         
     with col2:
         thalach = st.text_input('Maximum Heart Rate achieved')
         
     with col3:
-        exang = st.text_input('Exercise Induced Angina')
+        exang = st.text_input("Angina induced by exercise (1: Yes, 0: No)")
         
     with col1:
-        oldpeak = st.text_input('ST depression induced by exercise')
+        oldpeak = st.text_input('ST depression induced by exercise relative to rest')
         
     with col2:
         slope = st.text_input('Slope of the peak exercise ST segment')
