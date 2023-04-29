@@ -44,7 +44,7 @@ def heart_disease_prediction(input_data):
 
     
 # Heart Disease Prediction Page
-if (selected == 'Know your heart health'):
+
     
 def main():
     
