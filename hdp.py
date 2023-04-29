@@ -8,7 +8,7 @@ from streamlit_option_menu import option_menu
 
 # loading the saved model
 
-heart_disease_model = pickle.load(open('heart_disease_model.sav', 'rb'))
+heart_disease_model = pickle.load(open('trained_model.sav', 'rb'))
 
 
 # sidebar for navigation
@@ -44,37 +44,31 @@ if (selected == 'Know your heart health'):
         sex = st.text_input("Sex (1: Male, 0: Female)")
         
     with col3:
-        cp = st.text_input("Chest Pain Type (0: Typical Angina, 1: Atypical Angina, 2: Non-Anginal Pain, 3: Asymptomatic)")
+        chest_pain_type = st.text_input("Chest Pain Type (1: Typical Angina, 2: Atypical Angina, 3: Non-Anginal Pain, 4: Asymptomatic)")
         
     with col4:
-        trestbps = st.text_input("Level of blood pressure at resting mode in mm/HG")
+        resting_blood_pressure = st.text_input("Level of blood pressure at resting mode in mm/HG")
         
     with col1:
-        chol = st.text_input("Serum Cholestoral in mg/dl")
+        cholesterol = st.text_input("Serum Cholestoral in mg/dl")
         
     with col2:
-        fbs = st.text_input("Blood sugar levels on fasting > 120 mg/dl (1: True, 0: False)")
+        fasting_blood_sugar = st.text_input("Blood sugar levels on fasting > 120 mg/dl (1: True, 0: False)")
         
     with col3:
-        restecg = st.text_input("Resting electrocardiographic results (0 : Normal, 1: Abnormality in ST-T wave, 2: Left ventricular hypertrophy)")
+        rest_ecg = st.text_input("Resting electrocardiographic results (0 : Normal, 1: Abnormality in ST-T wave, 2: Left ventricular hypertrophy)")
         
     with col4:
-        thalach = st.text_input('Maximum Heart Rate achieved')
+        max_heart_rate_achieved = st.text_input('Maximum Heart Rate achieved')
         
     with col1:
-        exang = st.text_input("Angina induced by exercise (1: Yes, 0: No)")
+        exercise_induced_angina = st.text_input("Angina induced by exercise (1: Yes, 0: No)")
         
     with col2:
-        oldpeak = st.text_input("ST depression induced by exercise relative to rest")
+        st_depression = st.text_input("ST depression induced by exercise relative to rest")
         
     with col3:
-        slope = st.text_input("Slope of the peak exercise ST segment (0: upsloping, 1: flat, 2: downsloping)")
-        
-    with col4:
-        ca = st.text_input("Major vessels colored by flourosopy (Between 0-3)")
-        
-    with col1:
-        thal = st.text_input("Thalassemia (0: normal, 1: fixed defect, 2: reversable defect)")
+        st_slope = st.text_input("Slope of the peak exercise ST segment (1: upsloping, 2: flat, 3: downsloping)")
         
      
     # code for Prediction
@@ -83,12 +77,12 @@ if (selected == 'Know your heart health'):
     # creating a button for Prediction
     
     if st.button('Heart Disease Test Result'):
-        heart_prediction = heart_disease_model.predict([[age, sex, cp, trestbps, chol, fbs, restecg,thalach,exang,oldpeak,slope,ca,thal]])                          
+        heart_prediction = heart_disease_model.predict([[age,sex,chest_pain_type,resting_blood_pressure,cholesterol,fasting_blood_sugar,rest_ecg, max_heart_rate_achieved,exercise_induced_angina,st_depression,st_slope]])                          
         
-        if (heart_prediction[0] == 1):
-          heart_diagnosis = 'The person is having heart disease'
+        if (heart_prediction[0] == 0):
+          heart_diagnosis = 'This patient does not have any heart disease'
         else:
-          heart_diagnosis = 'The person does not have any heart disease'
+          heart_diagnosis = 'This patient has heart disease'
         
     st.success(heart_diagnosis)
         
