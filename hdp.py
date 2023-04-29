@@ -22,7 +22,7 @@ with st.sidebar:
 
 
 # Heart Disease Prediction Page
-if (selected == 'Heart Disease Prediction'):
+if (selected == 'Know your heart health'):
     
     # page title
     st.title('Heart Disease Prediction Web App')
