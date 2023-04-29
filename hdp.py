@@ -20,7 +20,6 @@ with st.sidebar:
                           icons=['heart'],
                           default_index=0)
 
-st.write ("Kindly provide your information in a numerical format.")
 
 # Heart Disease Prediction Page
 if (selected == 'Know your heart health'):
@@ -28,6 +27,8 @@ if (selected == 'Know your heart health'):
     # page title
     st.title('Heart Disease Prediction Web App')
     
+    st.write ("Kindly provide your information in a numerical format.")
+
     col1, col2, col3 = st.columns(3)
     
     with col1:
