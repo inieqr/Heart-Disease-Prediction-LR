@@ -77,7 +77,7 @@ if (selected == 'Know your heart health'):
     # creating a button for Prediction
     
     if st.button('Heart Disease Test Result'):
-        heart_prediction = heart_disease_model.predict([[age,sex,chest_pain_type,resting_blood_pressure,cholesterol,fasting_blood_sugar,rest_ecg, max_heart_rate_achieved,exercise_induced_angina,st_depression,st_slope]])                          
+        heart_prediction = heart_disease_model.predict([[age,sex,chest_pain_type,resting_blood_pressure,cholesterol,fasting_blood_sugar,rest_ecg,max_heart_rate_achieved,exercise_induced_angina,st_depression,st_slope]])                          
         
         if (heart_prediction[0] == 0):
           heart_diagnosis = 'This patient does not have any heart disease'
