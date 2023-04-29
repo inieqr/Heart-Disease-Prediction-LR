@@ -27,7 +27,9 @@ if (selected == 'Know your heart health'):
     # page title
     st.title('Heart Disease Prediction Web App')
     
-    st.write ("Kindly provide your information in a numerical format.")
+    st.write("Kindly provide your information in a numerical format.")
+    
+    st.write(" ")
 
     col1, col2, col3 = st.columns(3)
     
