@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 
 import numpy as np
+import pandas as pd
 import pickle
 import streamlit as st
 from streamlit_option_menu import option_menu
