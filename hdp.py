@@ -20,10 +20,7 @@ with st.sidebar:
                           ['Know your heart health'],
                           icons=['heart'],
                           default_index=0)
-    # Add "Restart" button to sidebar
-    st.sidebar.write('')
-    if st.sidebar.button('Restart'):
-        st.experimental_rerun()
+
 
 # Heart Disease Prediction Page
 
@@ -91,6 +88,11 @@ def main():
           heart_diagnosis = 'This patient has heart disease'
         
     st.success(heart_diagnosis)
+    
+    # Add "Restart" button to sidebar
+    st.sidebar.write('')
+    if st.sidebar.button('Restart'):
+        st.experimental_rerun()
         
 if __name__ == '__main__':
     main()
