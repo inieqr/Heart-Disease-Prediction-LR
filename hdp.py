@@ -88,20 +88,6 @@ def main():
           heart_diagnosis = 'This patient has heart disease'
         
     st.success(heart_diagnosis)
-    
-    # adding a button to clear inputs
-    if st.button('Clear Inputs'):
-        age = ''
-        sex = ''
-        chest_pain_type = ''
-        resting_blood_pressure = ''
-        cholesterol = ''
-        fasting_blood_sugar = ''
-        rest_ecg = ''
-        max_heart_rate_achieved = ''
-        exercise_induced_angina = ''
-        st_depression = ''
-        st_slope = ''
         
 if __name__ == '__main__':
     main()
