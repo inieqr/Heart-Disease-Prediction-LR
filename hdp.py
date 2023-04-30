@@ -89,18 +89,22 @@ def main():
         
     st.success(heart_diagnosis)
     
-    # clear the input fields
-    age_input = ''
-    sex_input = ''
-    chest_pain_type_input = ''
-    resting_blood_pressure_input = ''
-    cholesterol_input = ''
-    fasting_blood_sugar_input = ''
-    rest_ecg_input = ''
-    max_heart_rate_achieved_input = ''
-    exercise_induced_angina_input = ''
-    st_depression_input = ''
-    st_slope_input = ''
+    # create a function to clear the inputs
+    def clear_inputs():
+        age.text_input = ''
+        sex.text_input = ''
+        chest_pain_type.text_input = ''
+        resting_blood_pressure.text_input = ''
+        cholesterol.text_input = ''
+        fasting_blood_sugar.text_input = ''
+        rest_ecg.text_input = ''
+        max_heart_rate_achieved.text_input = ''
+        exercise_induced_angina.text_input = ''
+        st_depression.text_input = ''
+        st_slope.text_input = ''
+        
+    # create a button for clearing inputs
+    st.button('Clear Inputs', on_click=clear_inputs)
         
 if __name__ == '__main__':
     main()
