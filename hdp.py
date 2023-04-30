@@ -90,8 +90,8 @@ def main():
     st.success(heart_diagnosis)
     
     # Add "Restart" button to sidebar
-if st.sidebar.button('Restart'):
-    st.experimental_rerun()
+    if st.sidebar.button('Restart'):
+        st.experimental_rerun()
         
 if __name__ == '__main__':
     main()
