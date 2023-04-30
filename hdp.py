@@ -90,17 +90,17 @@ def main():
     st.success(heart_diagnosis)
     
     # clear the input fields
-        age_input = ''
-        sex_input = ''
-        chest_pain_type_input = ''
-        resting_blood_pressure_input = ''
-        cholesterol_input = ''
-        fasting_blood_sugar_input = ''
-        rest_ecg_input = ''
-        max_heart_rate_achieved_input = ''
-        exercise_induced_angina_input = ''
-        st_depression_input = ''
-        st_slope_input = ''
+    age_input = ''
+    sex_input = ''
+    chest_pain_type_input = ''
+    resting_blood_pressure_input = ''
+    cholesterol_input = ''
+    fasting_blood_sugar_input = ''
+    rest_ecg_input = ''
+    max_heart_rate_achieved_input = ''
+    exercise_induced_angina_input = ''
+    st_depression_input = ''
+    st_slope_input = ''
         
 if __name__ == '__main__':
     main()
