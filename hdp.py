@@ -71,34 +71,21 @@ def main():
         
     with col2:
         st_slope = st.text_input("Slope of the peak exercise ST segment (1: upsloping, 2: flat, 3: downsloping)")
-        
-    # creating a button for Prediction and Clear Inputs
-    col4, col5 = st.columns(2)
-    
-    with col4:
-        if st.button('Heart Disease Test Result'):
-            heart_prediction = loaded_model.predict([[age,sex,chest_pain_type,resting_blood_pressure,cholesterol,fasting_blood_sugar,rest_ecg,max_heart_rate_achieved,exercise_induced_angina,st_depression,st_slope]])
 
-            if (heart_prediction[0] == 0):
-              heart_diagnosis = 'This patient does not have any heart disease'
-            else:
-              heart_diagnosis = 'This patient has heart disease'
+    # code for Prediction
+    heart_diagnosis = ''
 
-            st.success(heart_diagnosis)
+    # creating a button for Prediction
 
-    with col5:
-        if st.button('Clear Inputs'):
-            age = ''
-            sex = ''
-            chest_pain_type = ''
-            resting_blood_pressure = ''
-            cholesterol = ''
-            fasting_blood_sugar = ''
-            rest_ecg = ''
-            max_heart_rate_achieved = ''
-            exercise_induced_angina = ''
-            st_depression = ''
-            st_slope = ''
+    if st.button('Heart Disease Test Result'):
+        heart_prediction = loaded_model.predict([[age,sex,chest_pain_type,resting_blood_pressure,cholesterol,fasting_blood_sugar,rest_ecg,max_heart_rate_achieved,exercise_induced_angina,st_depression,st_slope]])
+
+        if (heart_prediction[0] == 0):
+          heart_diagnosis = 'This patient does not have any heart disease'
+        else:
+          heart_diagnosis = 'This patient has heart disease'
+
+    st.success(heart_diagnosis)
         
 if __name__ == '__main__':
     main()
