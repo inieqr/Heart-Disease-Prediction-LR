@@ -24,13 +24,11 @@ with st.sidebar:
 # creating a function for prediction
 def heart_disease_prediction(input_data):
 
-    input_data = (40,1,2,140,289,0,0,172,0,0,1)
-
     # change the input data to a numpy array
     input_data_as_numpy_array= np.asarray(input_data)
 
     # reshape the numpy array as we are predicting for only on instance
-    input_data_reshaped = input_data_as_numpy_array.reshape(1,-1)
+    input_data_reshaped = pd.DataFrame(input_data_as_numpy_array.reshape(1,-1), columns = ['age', 'sex', 'chest_pain_type', 'resting_blood_pressure', 'cholesterol', 'fasting_blood_sugar', 'rest_ecg', 'max_heart_rate_achieved', 'exercise_induced_angina', 'st_depression', 'st_slope'])
 
     prediction = loaded_model.predict(input_data_reshaped)
     print(prediction)
