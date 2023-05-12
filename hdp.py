@@ -15,7 +15,7 @@ loaded_model = pickle.load(open('trained_model.sav', 'rb'))
 # sidebar for navigation
 with st.sidebar:
     
-    selected = option_menu('Design and Implementation of an Expert System to Predict Heart Disease Using Logistic Regression',
+    selected = option_menu('Heart Disease Using Logistic Regression',
                           
                           ['Know your heart health'],
                           icons=['heart'],
