@@ -15,9 +15,9 @@ loaded_model = pickle.load(open('trained_model.sav', 'rb'))
 # sidebar for navigation
 with st.sidebar:
     
-    selected = option_menu('Heart Disease Using Logistic Regression',
+    selected = option_menu('Using Logistic Regression Model',
                           
-                          ['Know your heart health'],
+                          ['Our model gave off 81% accuracy'],
                           icons=['heart'],
                           default_index=0)
 
@@ -27,7 +27,7 @@ with st.sidebar:
 def main():
     
     # page title
-    st.title('Heart Disease Prediction Web App')
+    st.title('Know Your Heart Health Status')
    
     st.write(" ")
     
