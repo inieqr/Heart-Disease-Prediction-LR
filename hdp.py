@@ -15,9 +15,9 @@ loaded_model = pickle.load(open('trained_model.sav', 'rb'))
 # sidebar for navigation
 with st.sidebar:
     
-    selected = option_menu('Using Logistic Regression Model',
+    selected = option_menu('Heart Disease Prediction Web Application',
                           
-                          ['Our model gave off 81% accuracy'],
+                          ['Our Logistic regression model gave off 81% accuracy'],
                           icons=['heart'],
                           default_index=0)
 
