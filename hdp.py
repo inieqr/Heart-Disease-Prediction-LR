@@ -28,7 +28,7 @@ def main():
     
     # page title
 #     st.title('Know Your Heart Health Status')
-    st.markdown("<h1 style='text-align: center; color: #2a2b2a;'>Know Your Heart Health Status</h1>", unsafe_allow_html=True)
+    st.markdown("<h1 style='text-align: center; color: red;'>Know Your Heart Health Status</h1>", unsafe_allow_html=True)
 
    
     st.write(" ")
