@@ -33,7 +33,7 @@ def main():
    
     st.write(" ")
     
-    st.write("Kindly provide your information in a numerical format.")
+    st.write("<p style='text-align: center; color: #2a2b2a;'>Kindly provide your information in a numerical format.</p>", unsafe_allow_html=True)
     
     st.write(" ")
     
