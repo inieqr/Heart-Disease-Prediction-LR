@@ -90,7 +90,8 @@ def main():
     st.success(heart_diagnosis)
     
     if (heart_diagnosis=='This patient has heart disease')
-        st.write("check out this [link](https://share.streamlit.io/mesmith027/streamlit_webapps/main/MC_pi/streamlit_app.py)")
+    
+    st.write("check out this [link](https://share.streamlit.io/mesmith027/streamlit_webapps/main/MC_pi/streamlit_app.py)")
 
         
 if __name__ == '__main__':
