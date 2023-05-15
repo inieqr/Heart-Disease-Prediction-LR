@@ -87,11 +87,10 @@ def main():
         else:
           heart_diagnosis = 'This patient has heart disease'
 
-    st.success(heart_diagnosis)
+        st.success(heart_diagnosis)
     
-   if (heart_diagnosis = 'This patient has heart disease')
-    
-    st.write("check out this [link](https://share.streamlit.io/mesmith027/streamlit_webapps/main/MC_pi/streamlit_app.py)")
+        if heart_diagnosis == 'This patient has heart disease':
+            st.write("check out this [link](https://share.streamlit.io/mesmith027/streamlit_webapps/main/MC_pi/streamlit_app.py)")
 
         
 if __name__ == '__main__':
