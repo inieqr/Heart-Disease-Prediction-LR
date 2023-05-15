@@ -90,7 +90,7 @@ def main():
         st.success(heart_diagnosis)
     
         if heart_diagnosis == 'This patient has heart disease':
-            st.write("To get additional help, you can click [here](https://share.streamlit.io/mesmith027/streamlit_webapps/main/MC_pi/streamlit_app.py) to get in touch with a cardiologist.")
+            st.write("To get additional help, you can click [here](https://www.finelib.com/cities/lagos/health/doctors-and-clinics/-cardiologists) to get in touch with a cardiologist.")
 
         
 if __name__ == '__main__':
