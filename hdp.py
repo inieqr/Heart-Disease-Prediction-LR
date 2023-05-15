@@ -86,6 +86,7 @@ def main():
           heart_diagnosis = 'This patient does not have any heart disease'
         else:
           heart_diagnosis = 'This patient has heart disease'
+          st.write("check out this [link](https://share.streamlit.io/mesmith027/streamlit_webapps/main/MC_pi/streamlit_app.py)")
 
     st.success(heart_diagnosis)
         
